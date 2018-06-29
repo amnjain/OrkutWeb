@@ -1,4 +1,3 @@
-
 <div class="media">
 	<a class="pull-left" href="{{ route('profile.index', ['username'=> $user->username]) }}">
 		@php $file = $user->avatar;  @endphp
