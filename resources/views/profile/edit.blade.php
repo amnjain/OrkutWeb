@@ -8,8 +8,8 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-							{{Form::label('first_name','First Name', ['class'=>'control-label'])}}
-							{{Form::text('first_name','', ['class'=>'form-control'])}}
+							{{Form::label('first_name','First Name', ['class'=>'control-label','required'])}}
+							{{Form::text('first_name','', ['class'=>'form-control', 'required'])}}
 							@if ($errors->has('first_name'))
 								<span class="help-block">{{ $errors->first('first_name') }}</span>
 							@endif
@@ -18,7 +18,7 @@
 					<div class="col-lg-6">
 						<div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
 							{{Form::label('last_name','Last Name', ['class'=>'control-label'])}}
-							{{Form::text('last_name','', ['class'=>'form-control'])}}
+							{{Form::text('last_name','', ['class'=>'form-control', 'required'])}}
 							@if ($errors->has('last_name'))
 								<span class="help-block">{{ $errors->first('last_name') }}</span>
 							@endif
@@ -26,8 +26,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					{{Form::label('profile','Upload Profile', ['class'=>'control-label'])}}
-					{{Form::file('profile',['class'=>'form-control'])}}
+					{{Form::label('profile','Upload Profile', ['class'=>'control-label', 'required'])}}
+					{{Form::file('profile',['class'=>'form-control', 'required'])}}
 				</div>
 				<div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
 					{{Form::label('location','Location', ['class'=>'control-label'])}}

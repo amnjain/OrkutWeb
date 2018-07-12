@@ -76,9 +76,10 @@ class User extends Authenticatable
     */
     public function getAvatar()
     {
-        $file = Auth::user()->avatar;
+        //$this = new User();
+        $file = $this->avatar;
         //dd($file);
-        if(!$file=='user.jpg')
+        if($file!='user.jpg')
         {
           return "Uploads/avatars/$file";
         }
